@@ -4,8 +4,19 @@ import java.util.Scanner;
 class Main {
   public static void main(String[] args) {
     //Declare a char to store the chosen quadilateral
+    char Parallelogram;
+    char Trapezoid;
+    char Square;
+    char Rectangle;
 
     //using a switch check what the user selected and use it to calculate the perimeter and area of the desired quadilateral
+    System.out.println("This program is for checking the desired area of any quadilateral");
+    System.out.println(" p for Parallelogram,t for Trapezoid, s for square and g for rectangle");
+    Scanner scan= new Scanner(System.in);
+    char quadilateral= scan.next().charAt(0);
+    switch (quadilateral) {
+      case 'p':
+
 
     //this should be in the parallelogram case
     System.out.println("This program calculates the area and perimeter of the parallelogram.");
@@ -33,6 +44,7 @@ class Main {
     System.out.println("");
 
     //this should be in the Trapezoid case
+    case 't':
      System.out.println("Calculation for a Trapezoid");
      System.out.println("Input first side");
      float a = scan.nextFloat();
@@ -49,6 +61,7 @@ class Main {
     System.out.println("");
 
     // for the rhombus:
+    case 'r':
     System.out.println("Calculation of rhombus");
     System.out.println("Input value for the first diagonal");
     float diagonal1 = scan.nextFloat();
@@ -68,7 +81,8 @@ class Main {
     System.out.println("");
     System.out.println("");
             
-   //  for the square:       
+   //  for the square:  
+   case 's' :    
    System.out.println("Calculation of square");
    System.out.println("Input the side of the square");
    float sLength = scan.nextInt();
@@ -87,6 +101,7 @@ class Main {
    System.out.println("");
 
    // for the rectangle:
+   case 'g':
    System.out.println("Calculation of rectangle");
    System.out.println("Input the length of the rectangle");
    float rLength = scan.nextFloat();
@@ -209,4 +224,5 @@ class Quadilateral {
   public float calculatePerimeter(){
     return 2*(length+breadth);
   }
+ }
 }
